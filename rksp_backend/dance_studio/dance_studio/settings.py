@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ["rksp-backend-8hbb.onrender.com", "backend"]
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    "0.0.0.0:3000"
+    "http://0.0.0.0:3000"
 ] 
 
 

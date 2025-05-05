@@ -21,5 +21,7 @@ RUN pip install -r ./requirements.txt --no-cache-dir
 # в текущую рабочую директорию образа — /app.
 COPY . .
 
+EXPOSE 8000
+
 # При старте контейнера запустить сервер разработки.
 CMD ["python", "rksp_backend/dance_studio/manage.py", "runserver", "0:8000"]
