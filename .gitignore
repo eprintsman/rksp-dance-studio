@@ -10,7 +10,6 @@
 # Python (Django)
 __pycache__/
 *.py[cod]
-*.sqlite3
 *.log
 .env
 .env.local
@@ -22,7 +21,6 @@ Pipfile.lock
 pyvenv.cfg
 
 # База данных SQLite (если не хотите коммитить её)
-*.sqlite3
 *.db
 *.db-journal
 
@@ -115,8 +113,6 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
-db.sqlite3
-db.sqlite3-journal
 
 # Flask stuff:
 instance/
