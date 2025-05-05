@@ -5,7 +5,7 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Копируем package.json и package-lock.json (или yarn.lock)
-COPY package*.json ./
+COPY ./rksp_frontend/package*.json ./
 
 # Устанавливаем зависимости
 RUN npm install
