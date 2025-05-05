@@ -22,7 +22,7 @@ const AbonementCard = ({ abonement }) => {
       const decoded = jwtDecode(token);
       const userId = decoded.user_id;
 
-      const getUserResponse = await axios.get(`http://127.0.0.1:8000/schedule/users/me/`, {
+      const getUserResponse = await axios.get(`http://0.0.0.0:8000/schedule/users/me/`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -43,7 +43,7 @@ const AbonementCard = ({ abonement }) => {
           is_active: true
       }
 
-      const response = await axios.post(`http://127.0.0.1:8000/schedule/abonements/`, editedData, {
+      const response = await axios.post(`http://0.0.0.0:8000/schedule/abonements/`, editedData, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'

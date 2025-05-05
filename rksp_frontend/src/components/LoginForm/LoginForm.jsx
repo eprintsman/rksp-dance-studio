@@ -18,7 +18,7 @@ const LoginForm = () => {
     
     try {
       // запрос к API для входа
-      const response = await axios.post('http://127.0.0.1:8000/auth/jwt/create/', {
+      const response = await axios.post('http://0.0.0.0:8000/auth/jwt/create/', {
         username: data.username,
         password: data.password
       },

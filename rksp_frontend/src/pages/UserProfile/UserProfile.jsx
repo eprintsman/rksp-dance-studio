@@ -25,7 +25,7 @@ const UserProfile = () => {
         
         
             // Запрашиваем данные пользователя
-            const response = await axios.get(`http://127.0.0.1:8000/schedule/users/me/`, {
+            const response = await axios.get(`http://0.0.0.0:8000/schedule/users/me/`, {
               headers: {
                 'Authorization': `Bearer ${token}`
               }
@@ -74,7 +74,7 @@ const UserProfile = () => {
       const decoded = jwtDecode(token);
       const userId = decoded.user_id;
 
-      const response = await axios.patch(`http://127.0.0.1:8000/schedule/users/me/`, editedData, {
+      const response = await axios.patch(`http://0.0.0.0:8000/schedule/users/me/`, editedData, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
