@@ -19,6 +19,8 @@ COPY ./rksp_frontend /app/rksp_frontend/
 # Собираем приложение (здесь предполагается, что проект использует npm run build)
 RUN npm run build
 
+ENV HOST=0.0.0.0
+
 # Порт, который будет слушать React (обычно 3000)
 EXPOSE 3000
 
