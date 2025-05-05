@@ -7,7 +7,6 @@ services:
       - rksp
     environment:
       - DEBUG=1
-      - DJANGO_ALLOWED_HOSTS=backend
 
   frontend:
     build: ./rksp_frontend
