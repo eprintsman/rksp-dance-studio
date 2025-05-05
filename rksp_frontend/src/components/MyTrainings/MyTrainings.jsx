@@ -23,7 +23,7 @@ const MyTrainings = () => {
         }
 
         const response = await axios.get(
-          `http://0.0.0.0:8000/schedule/registrations/`,
+          `https://rksp-backend-kyug.onrender.com//schedule/registrations/`,
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -59,7 +59,7 @@ const MyTrainings = () => {
     try {
       // Находим ID записи на тренировку
       const registrationsResponse = await axios.get(
-        `http://0.0.0.0:8000/schedule/registrations/?training=${trainingId}`,
+        `https://rksp-backend-kyug.onrender.com//schedule/registrations/?training=${trainingId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -76,7 +76,7 @@ const MyTrainings = () => {
 
       // Удаляем запись
       await axios.delete(
-        `http://0.0.0.0:8000/schedule/registrations/${registrationId}/`,
+        `https://rksp-backend-kyug.onrender.com//schedule/registrations/${registrationId}/`,
         {
           headers: {
             Authorization: `Bearer ${token}`

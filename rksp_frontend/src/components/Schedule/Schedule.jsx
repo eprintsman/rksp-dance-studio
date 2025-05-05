@@ -17,8 +17,8 @@ const Schedule = () => {
       try {
         // Получаем тренировки и записи параллельно
         const [trainingsRes, registrationsRes] = await Promise.all([
-          axios.get('http://0.0.0.0:8000/schedule/trainings/'),
-          axios.get('http://0.0.0.0:8000/schedule/registrations/', {
+          axios.get('https://rksp-backend-kyug.onrender.com//schedule/trainings/'),
+          axios.get('https://rksp-backend-kyug.onrender.com//schedule/registrations/', {
             headers: isAuthenticated ? {
               Authorization: `Bearer ${localStorage.getItem('access_token')}`
             } : {}
@@ -72,7 +72,7 @@ const Schedule = () => {
       }
   
       const response = await axios.post(
-        'http://0.0.0.0:8000/schedule/registrations/',
+        'https://rksp-backend-kyug.onrender.com//schedule/registrations/',
         { training_id: trainingId },
         {
           headers: {
@@ -110,7 +110,7 @@ const Schedule = () => {
   //     }
       
   //     const response = await axios.post(
-  //       'http://0.0.0.0:8000/schedule/registrations/',
+  //       'https://rksp-backend-kyug.onrender.com//schedule/registrations/',
   //       { training_id: trainingId },
   //       {
   //         headers: {

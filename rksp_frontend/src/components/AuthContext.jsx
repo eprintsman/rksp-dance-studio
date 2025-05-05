@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
     }
   
     try {
-      const response = await axios.post('http://0.0.0.0:8000/auth/jwt/refresh/', {
+      const response = await axios.post('https://rksp-backend-kyug.onrender.com//auth/jwt/refresh/', {
         refresh: refreshToken
       });
   

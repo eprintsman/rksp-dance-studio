@@ -28,9 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [".onrender.com", "backend"]
 
-CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https://.*\.onrender\.com$",
-]
+CORS_ALLOWED_ORIGINS = [
+    "https://rksp-frontend.onrender.com/"
+] 
 
 
 # Application definition

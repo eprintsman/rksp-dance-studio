@@ -15,7 +15,7 @@ const RegistrationForm = () => {
 
     try {
       // запрос к API для регистрации
-      const response = await axios.post('http://0.0.0.0:8000/auth/users/', {
+      const response = await axios.post('https://rksp-backend-kyug.onrender.com//auth/users/', {
         username: data.username,
         password: data.password
       });
