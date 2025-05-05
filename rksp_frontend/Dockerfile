@@ -1,28 +1,19 @@
-# Базовый образ (Node.js с Alpine Linux для уменьшения размера)
-FROM node:18-alpine
-
-# Рабочая директория внутри контейнера
+# Stage 1: build the React app
+FROM node:18-alpine AS build
 WORKDIR /app
 
-# Копируем package.json и package-lock.json (или yarn.lock) из подкаталога rksp_frontend
-COPY ./rksp_frontend/package*.json ./rksp_frontend/
-
-# Переходим в директорию проекта, где лежат package.json и package-lock.json
-WORKDIR /app/rksp_frontend
-
-# Устанавливаем зависимости для проекта
+# Копируем package.json и устанавливаем зависимости
+COPY ./rksp_frontend/package*.json ./
 RUN npm install
 
-# Копируем все файлы проекта в рабочую директорию контейнера
-COPY ./rksp_frontend /app/rksp_frontend/
-
-# Собираем приложение (здесь предполагается, что проект использует npm run build)
+# Копируем весь исходный код и собираем
+COPY ./rksp_frontend ./
 RUN npm run build
 
-ENV HOST=0.0.0.0
+# Stage 2: use Nginx to serve the app
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
 
-# Порт, который будет слушать React (обычно 3000)
-EXPOSE 3000
-
-# Запускаем приложение
-CMD ["npm", "start"]
+# Render ожидает, что приложение слушает на 80 порту
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
