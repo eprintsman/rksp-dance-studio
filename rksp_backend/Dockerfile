@@ -24,4 +24,4 @@ COPY . .
 EXPOSE 8000
 
 # При старте контейнера запустить сервер разработки.
-CMD ["python", "rksp_backend/dance_studio/manage.py", "runserver", "0:8000"]
+CMD ["python", "rksp_backend/dance_studio/manage.py", "runserver", "0.0.0.0:8000"]
