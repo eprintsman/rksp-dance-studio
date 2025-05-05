@@ -28,10 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [".onrender.com", "backend"]
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    "http://0.0.0.0:3000"
-] 
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.onrender\.com$",
+]
 
 
 # Application definition
