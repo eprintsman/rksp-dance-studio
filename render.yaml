@@ -3,8 +3,7 @@ services:
     name: rksp-backend
     env: docker
     plan: free
-    dockerfilePath: ./rksp_backend/Dockerfile
-    buildContext: ./rksp_backend
+    dockerfilePath: rksp_backend/Dockerfile
     envVars:
       - key: DEBUG
         value: "1"
@@ -15,8 +14,7 @@ services:
     name: rksp-frontend
     env: docker
     plan: free
-    dockerfilePath: ./rksp_frontend/Dockerfile
-    buildContext: ./rksp_frontend
+    dockerfilePath: rksp_frontend/Dockerfile
     envVars:
       - key: REACT_APP_API_URL
         value: https://rksp-backend.onrender.com
