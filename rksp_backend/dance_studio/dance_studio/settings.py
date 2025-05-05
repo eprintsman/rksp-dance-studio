@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [".onrender.com", "backend"]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://rksp-frontend.onrender.com/"
+    "https://rksp-frontend.onrender.com"
 ] 
 
 
