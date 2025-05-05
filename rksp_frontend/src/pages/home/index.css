@@ -1,0 +1,25 @@
+@import '../../vars.css';
+section {
+    background-color: var(--background-color-light-pink);
+}
+section h1{
+  text-align: center;
+  color: var(--text-color-primary);
+  font-family: 'Playfair Display', serif;
+  position: relative;
+}
+p{
+  color: var(--background-color-light-pink);
+  opacity: .7;
+}
+.title{
+  opacity: .9;
+}
+  
+.cards {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+padding: 20px;
+} 

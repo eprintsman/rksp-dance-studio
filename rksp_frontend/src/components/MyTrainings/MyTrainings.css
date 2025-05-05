@@ -1,0 +1,166 @@
+.my-trainings-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+  
+  .my-trainings-title {
+    color: #6d4a52;
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .no-trainings {
+    text-align: center;
+    padding: 2rem;
+    color: #7a5a65;
+    font-size: 1.2rem;
+    background: #faf3f7;
+    border-radius: 12px;
+  }
+  
+  .trainings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .training-card {
+    background: #fff;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(166, 123, 146, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1.5rem;
+  }
+  
+  .training-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(166, 123, 146, 0.15);
+  }
+  
+  .card-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 70px 70px 0;
+    border-color: transparent #d4a5b5 transparent transparent;
+  }
+  
+  .training-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #e5c7d1;
+  }
+  
+  .direction-name {
+    color: #6d4a52;
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.5rem;
+  }
+  
+  .training-time {
+    color: #7a5a65;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .duration {
+    background: #f0e6eb;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+  }
+  
+  .training-details {
+    margin-bottom: 1.5rem;
+  }
+  
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+  }
+  
+  .detail-label {
+    color: #9e8a91;
+    font-size: 0.9rem;
+  }
+  
+  .detail-value {
+    color: #6d4a52;
+    font-weight: 500;
+  }
+  
+  .cancel-button {
+    width: 100%;
+    padding: 0.8rem;
+    background: none;
+    border: 1px solid #e5c7d1;
+    color: #e53935;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    margin-top: 1rem;
+    z-index: 1;
+  }
+  
+  .cancel-button span {
+    position: relative;
+    z-index: 3;
+  }
+  
+  .cancel-button .button-decoration {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffebee, #ffcdd2);
+    transition: left 0.4s ease;
+    z-index: 2;
+  }
+  
+  .cancel-button:hover {
+    color: #fff;
+    border-color: #e53935;
+  }
+  
+  .cancel-button:hover .button-decoration {
+    left: 0;
+    background: linear-gradient(45deg, #ef9a9a, #e57373);
+  }
+  
+  .loading, .error {
+    text-align: center;
+    padding: 2rem;
+    color: #6d4a52;
+    font-size: 1.2rem;
+  }
+  
+  .error {
+    color: #e53935;
+  }
+  
+  @media (max-width: 768px) {
+    .trainings-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .my-trainings-container {
+      padding: 1rem;
+    }
+  }

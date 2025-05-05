@@ -1,0 +1,306 @@
+[
+  {
+    "model": "schedule.direction",
+    "pk": 1,
+    "fields": {
+      "name": "Сальса"
+    }
+  },
+  {
+    "model": "schedule.direction",
+    "pk": 2,
+    "fields": {
+      "name": "Бачата"
+    }
+  },
+  {
+    "model": "schedule.direction",
+    "pk": 3,
+    "fields": {
+      "name": "High heels"
+    }
+  },
+  {
+    "model": "schedule.direction",
+    "pk": 4,
+    "fields": {
+      "name": "Контемпорари"
+    }
+  },
+  {
+    "model": "schedule.trainer",
+    "pk": 1,
+    "fields": {
+      "name": "Алиса Доценко",
+      "bio":"Участница проектов «Танцы без правил», «Танцуют все», «Танцы на ТНТ».  Направление: Vogue, Контемп.",
+      "experience": 5,
+      "photo": "trainers/dotsenko.jpg"
+    }
+  },
+  {
+    "model": "schedule.trainer",
+    "pk": 2,
+    "fields": {
+      "name": "Татьяна Денисова",
+      "bio":"Украинская и российская хореограф, танцовщица, режиссёр-постановщик и телеведущая. Основательница танцевального театра JB Ballet в Германии, известная как строгий, но вдохновляющий наставник в шоу «Танцуют все!» (Украина) и «Танцы» (Россия). Направление: Танго, Контемп.",
+      "experience": 7,
+      "photo": "trainers/tanya.webp"
+    }
+  },
+  {
+    "model": "schedule.trainer",
+    "pk": 3,
+    "fields": {
+      "name": "Мигель",
+      "bio":"Хореограф с 12-летним опытом, специализирующийся на латиноамериканских танцах. Мастер сальсы, бачаты и ча-ча-ча. Участник мировых танцевальных чемпионатов, создатель авторской методики 'Ritmo Libre'. Его ученики — победители международных конкурсов. 'Танец — это язык тела, а я помогаю сделать его красноречивым'. Направление: High heeels, Бачата.",
+      "experience": 12,
+      "photo": "trainers/migel.jpg"
+    }
+  },
+  {
+    "model": "schedule.hall",
+    "pk": 1,
+    "fields": {
+      "name": "Зал 1",
+      "capacity": 15,
+      "description": "Основной зал с зеркалами"
+    }
+  },
+  {
+    "model": "schedule.hall",
+    "pk": 2,
+    "fields": {
+      "name": "Зал 2",
+      "capacity": 10,
+      "description": "Малый зал для индивидуальных занятий"
+    }
+  },
+  {
+    "model": "schedule.abonementtype",
+    "pk": 1,
+    "fields": {
+      "name": "Мини",
+      "lesson_count": 4,
+      "price": 2000.00,
+      "is_active": true
+    }
+  },
+  {
+    "model": "schedule.abonementtype",
+    "pk": 2,
+    "fields": {
+      "name": "Стандарт",
+      "lesson_count": 8,
+      "price": 3500.00,
+      "is_active": true
+    }
+  },
+  {
+    "model": "schedule.abonementtype",
+    "pk": 3,
+    "fields": {
+      "name": "Премиум",
+      "lesson_count": 16,
+      "price": 7000.00,
+      "is_active": true
+    }
+  },
+  {
+    "model": "schedule.customuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "email": "admin@dance.studio",
+      "is_staff": true,
+      "is_active": true,
+      "first_name": "Администратор",
+      "last_name": "Системы",
+      "phone": "+79160000000"
+    }
+  },
+  {
+    "model": "schedule.customuser",
+    "pk": 2,
+    "fields": {
+      "password": "1234qwer",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "client1",
+      "email": "client1@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "first_name": "Мария",
+      "last_name": "Иванова",
+      "phone": "+79161112233",
+      "birth_date": "2003-12-15",
+      "abonement": "1"
+    }
+  },
+  {
+    "model": "schedule.abonement",
+    "pk": 1,
+    "fields": {
+      "abonement_type": "1",
+      "remaining_lessons": 8,
+      "user": 2,
+      "is_active": true
+    }
+  },
+  {
+    "model": "schedule.training",
+    "pk": 1,
+    "fields": {
+      "start_datetime": "2023-11-15T18:00:00Z",
+      "duration_minutes": 60,
+      "hall": 1,
+      "direction": 1,
+      "trainer": 1,
+      "is_active": true,
+      "max_participants": 12
+    }
+  },
+  {
+    "model": "schedule.training",
+    "pk": 2,
+    "fields": {
+      "start_datetime": "2023-11-15T19:30:00Z",
+      "duration_minutes": 90,
+      "hall": 1,
+      "direction": 2,
+      "trainer": 1,
+      "is_active": true,
+      "max_participants": 12
+    }
+  },
+  {
+    "model": "schedule.training",
+    "pk": 3,
+    "fields": {
+      "start_datetime": "2023-11-16T17:00:00Z",
+      "duration_minutes": 60,
+      "hall": 2,
+      "direction": 3,
+      "trainer": 2,
+      "is_active": true,
+      "max_participants": 8
+    }
+  },
+  {
+    "model": "schedule.training",
+    "pk": 4,
+    "fields": {
+      "start_datetime": "2023-11-16T19:00:00Z",
+      "duration_minutes": 90,
+      "hall": 1,
+      "direction": 4,
+      "trainer": 2,
+      "is_active": true,
+      "max_participants": 10
+    }
+  },
+  {
+    "model": "schedule.training",
+    "pk": 5,
+    "fields": {
+      "start_datetime": "2023-11-17T18:00:00Z",
+      "duration_minutes": 60,
+      "hall": 1,
+      "direction": 1,
+      "trainer": 1,
+      "is_active": true,
+      "max_participants": 12
+    }
+  },
+  {
+    "model": "schedule.training",
+    "pk": 6,
+    "fields": {
+      "start_datetime": "2023-11-18T12:00:00Z",
+      "duration_minutes": 120,
+      "hall": 1,
+      "direction": 1,
+      "trainer": 1,
+      "is_active": true,
+      "max_participants": 15
+    }
+  },
+  {
+    "model": "schedule.training",
+    "pk": 7,
+    "fields": {
+      "start_datetime": "2023-11-18T15:00:00Z",
+      "duration_minutes": 60,
+      "hall": 2,
+      "direction": 2,
+      "trainer": 2,
+      "is_active": true,
+      "max_participants": 8
+    }
+  },
+  {
+    "model": "schedule.training",
+    "pk": 8,
+    "fields": {
+      "start_datetime": "2023-11-19T11:00:00Z",
+      "duration_minutes": 90,
+      "hall": 1,
+      "direction": 3,
+      "trainer": 2,
+      "is_active": true,
+      "max_participants": 12
+    }
+  },
+  {
+    "model": "schedule.training",
+    "pk": 9,
+    "fields": {
+      "start_datetime": "2023-11-19T17:00:00Z",
+      "duration_minutes": 60,
+      "hall": 2,
+      "direction": 4,
+      "trainer": 1,
+      "is_active": true,
+      "max_participants": 8
+    }
+  },
+  {
+    "model": "schedule.training",
+    "pk": 10,
+    "fields": {
+      "start_datetime": "2023-11-20T18:30:00Z",
+      "duration_minutes": 90,
+      "hall": 1,
+      "direction": 1,
+      "trainer": 1,
+      "is_active": true,
+      "max_participants": 12
+    }
+  },
+  {
+    "model": "schedule.usertraining",
+    "pk": 1,
+    "fields": {
+      "training": 8,
+      "user": 2
+    }
+  },
+  {
+    "model": "schedule.usertraining",
+    "pk": 2,
+    "fields": {
+      "training": 6,
+      "user": 2
+    }
+  },
+  {
+    "model": "schedule.usertraining",
+    "pk": 3,
+    "fields": {
+      "training": 1,
+      "user": 2
+    }
+  }
+]

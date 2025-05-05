@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  backend:
+    build: ./rksp_backend
+    ports:
+      - "8000:8000"
+    networks:
+      - rksp
+    environment:
+      - DEBUG=1
+      - DJANGO_ALLOWED_HOSTS=backend
+
+  frontend:
+    build: ./rksp_frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - rksp
+
+networks:
+  rksp:
+    external: true

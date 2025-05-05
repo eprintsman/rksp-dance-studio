@@ -1,0 +1,38 @@
+@import '../../vars.css';
+
+.static-card {
+    background-color: #fff;
+    border: 1px solid var(--backgraund-color-pink);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 450px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
+    display: flex;
+    flex-direction: column; /* Добавлено для вертикального расположения */
+}
+
+.card-image {
+    width: 100%; /* Изменено для заполнения ширины карточки */
+    height: 250px; /* Уменьшена высота для баланса */
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-text {
+    margin: 0px 0;
+    text-align: center;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}

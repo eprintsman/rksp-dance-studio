@@ -1,0 +1,9 @@
+@import '../../vars.css';
+
+.footer {
+    background-color: var(--backgraund-color-pink);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    color: var(--text-color-footer);
+  }
