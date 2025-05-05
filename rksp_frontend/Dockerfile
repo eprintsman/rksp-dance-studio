@@ -4,16 +4,19 @@ FROM node:18-alpine
 # Рабочая директория внутри контейнера
 WORKDIR /app
 
-# Копируем package.json и package-lock.json (или yarn.lock)
-COPY ./rksp_frontend/package*.json ./
+# Копируем package.json и package-lock.json (или yarn.lock) из подкаталога rksp_frontend
+COPY ./rksp_frontend/package*.json ./rksp_frontend/
 
-# Устанавливаем зависимости
+# Переходим в директорию проекта, где лежат package.json и package-lock.json
+WORKDIR /app/rksp_frontend
+
+# Устанавливаем зависимости для проекта
 RUN npm install
 
-# Копируем все файлы проекта
-COPY . .
+# Копируем все файлы проекта в рабочую директорию контейнера
+COPY ./rksp_frontend /app/rksp_frontend/
 
-# Собираем приложение (опционально, если используете билд)
+# Собираем приложение (здесь предполагается, что проект использует npm run build)
 RUN npm run build
 
 # Порт, который будет слушать React (обычно 3000)
